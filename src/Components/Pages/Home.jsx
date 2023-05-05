@@ -9,7 +9,9 @@ import img9 from '../../assets/img-9.png'
 import { Button,  CardGroup } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import ChefCard from './ChefCard';
+import useTitle from '../../Hooks/useTitle';
 const Home = () => {
+  useTitle('Home')
     const chefs = useLoaderData();
     // console.log(chefs);
     return (

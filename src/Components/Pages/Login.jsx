@@ -3,8 +3,10 @@ import { Button, Form, Row } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AiFillGoogleCircle,AiFillGithub } from 'react-icons/ai';
 import { AuthContext } from '../Providers/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const Login = () => {
+  useTitle('Login')
   const {signUser,googleUser,githubUser} = useContext(AuthContext);
   const [err,setErr] = useState([]);
   const location = useLocation();

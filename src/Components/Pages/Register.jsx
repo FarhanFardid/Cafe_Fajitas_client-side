@@ -3,8 +3,10 @@ import { useContext } from 'react';
 import { Button, Form, Row } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const Register = () => {
+  useTitle('Sign Up')
   const {createUser,profileUpdate} = useContext(AuthContext);
   const [err,setErr] = useState('');
     const [accepted,setAccepted] = useState(false);
